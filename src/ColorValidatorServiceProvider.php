@@ -1,8 +1,6 @@
 <?php namespace Russoedu\ColorValidator;
 
 use Illuminate\Support\ServiceProvider;
-use Olssonm\IdentityNumber\IdentityNumberFormatter;
-use Olssonm\IdentityNumber\IdentityNumber;
 
 class ColorValidatorServiceProvider extends ServiceProvider
 {
@@ -75,7 +73,13 @@ class ColorValidatorServiceProvider extends ServiceProvider
     protected function extendValidator($rule)
     {
         $method = studly_case($rule);
-        $translation = trans('colorvalidator::validation');
+
+        if(\Mcamara\LaravelLocalization\Facades\LaravelLocalization::class) {
+            $translation = trans('colorvalidator::validation', [], 'messages', \Mcamara\LaravelLocalization\Facades\LaravelLocalization::getCurrentLocale());
+        } else {
+            $translation = trans('colorvalidator::validation');
+        }
+
         $this->app['validator']->extend($rule, 'Russoedu\ColorValidator\colorvalidator@validate' . $method, $translation[$rule]);
     }
     /**
