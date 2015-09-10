@@ -1,0 +1,30 @@
+{
+    "name": "russoedu/colorvalidator",
+    "description": "Custom Laravel 5 Validator for hexadecimal color",
+    "keywords": ["laravel5","validator","color"],
+    "homepage": "https://github.com/russoedu/colorvalidator",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Eduardo Russo",
+            "email": "russoedu@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "ext-gd": "*",
+        "ext-bcmath": "*",
+        "illuminate/support": "5.*",
+        "illuminate/translation": "5.*",
+        "illuminate/validation": "5.*"
+    },
+    "require-dev": {
+    },
+    "autoload": {
+        "psr-4": {
+            "Russoedu\\ColorValidator\\": "src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
