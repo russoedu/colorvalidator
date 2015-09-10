@@ -13,8 +13,7 @@ class ColorValidatorServiceProvider extends ServiceProvider
      */
     protected $defer = false;
     protected $rules = array(
-        'image_size',
-        'image_aspect',
+        'hex_color',
     );
 
     /**
@@ -56,7 +55,7 @@ class ColorValidatorServiceProvider extends ServiceProvider
      */
     protected function loadTranslator()
     {
-        return trans('imagevalidator::validation');
+        return trans('colorvalidator::validation');
     }
     /**
      * Add new rules to the validator.
@@ -76,9 +75,8 @@ class ColorValidatorServiceProvider extends ServiceProvider
     protected function extendValidator($rule)
     {
         $method = studly_case($rule);
-        $translation = trans('color-validator::validation');
+        $translation = trans('colorvalidator::validation');
         $this->app['validator']->extend($rule, 'Russoedu\ColorValidator\colorvalidator@validate' . $method, $translation[$rule]);
-        $this->app['validator']->replacer($rule, 'Russoedu\ColorValidator\colorvalidator@replace' . $method );
     }
     /**
      * Register the service provider.
