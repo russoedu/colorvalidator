@@ -1,7 +1,7 @@
 {
     "name": "russoedu/colorvalidator",
     "description": "Custom Laravel 5 Validator for hexadecimal color",
-    "keywords": ["laravel5","validator","color"],
+    "keywords": ["laravel", "laravel5", "validator","color"],
     "homepage": "https://github.com/russoedu/colorvalidator",
     "license": "MIT",
     "authors": [

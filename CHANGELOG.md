@@ -1,6 +1,6 @@
 # Changelog
 
-All Notable changes to color-validator will be documented in this file
+All Notable changes to colorvalidator will be documented in this file
 
 ### Added
 - Nothing
