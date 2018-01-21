@@ -59,11 +59,3 @@ If you're using the validation throughout your application, you also might want 
 ## License
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
-
-© 2015 [Marcus Olsson](https://marcusolsson.me).
-
-[ico-version]: https://img.shields.io/packagist/v/olssonm/identity-number.svg?style=flat-square
-[ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
-[ico-travis]: https://img.shields.io/travis/olssonm/identity-number/master.svg?style=flat-square
-[link-packagist]: https://packagist.org/packages/olssonm/identity-number
-[link-travis]: https://travis-ci.org/olssonm/identity-number
